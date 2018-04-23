@@ -20,7 +20,7 @@ function deepestChild() {
   let grandNode = [...document.querySelector("div#grand-node").querySelectorAll("*")];
   return grandNode;
   grandNode.forEach((element)=> {
-    if(element.querySelector("*")===null)
+    if(element.innerHTML=="")
     {
       return element;
     }
