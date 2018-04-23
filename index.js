@@ -18,11 +18,12 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   let grandNode = [...document.querySelector("div#grand-node").querySelectorAll("*")];
-  grandNode.forEach((element)=> {
-    if(element.innerHTML=="boo!")
+  for( let i=0;i<grandNode.length;i++)
+  {
+    if(grandNode[i].querySelector("*")===null)
     {
-      return element;
+      return grandNode[i];
     }
-  })
+  }
   
 }
